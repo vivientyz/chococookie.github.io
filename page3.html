@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<!--Lato font embed link-->
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+<title>Tampines Eco Green</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="slideshow.css">
+
+</head>
+<body>
+
+<h1 style="font-weight:300; padding:10px; padding-left:30px;margin:0;">Tampines Eco Green</h1>
+
+<ul>
+	<li style="padding-left:20px;"><a href="index.html">HOME</a></li>
+	<li><a href="page2.html">THINGS TO DO</a></li>
+	<li><a href="page3.html">GETTING THERE</a></li>
+	<li><a href="page4.html">CONTACT US</a></li>
+</ul>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="images/home01.jpg" style="width:100%">
+  <div class="text">Tampines Eco Green entrance</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="images/home02.jpg" style="width:100%">
+  <div class="text">Bird Viewing</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="images/home03.jpg" style="width:100%">
+  <div class="text">Wide green paths</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+
+<div id="textbox" style="width:100%;">
+<h2>About Tampines Eco Green</h2>
+<h4><p>Tampines Eco Green is an eco-friendly park that offers a sanctuary for flora and fauna and a place for nature recreation.</p>
+
+<p>With various natural habitats such as open grasslands, freshwater wetlands and a secondary rainforest, the park is a haven for biodiversity and a great place for visitors to enjoy the best of nature.</p>
+
+<p>Hiking trails within the park allow nature lovers to discover an array of flora and fauna and experience nature in all its glory. Linked via park connectors from Tampines Biking Trail and Sun Plaza Park, cyclists need to push or park their bike at the available bicycle stands at the main entrance of Tampines Eco Green and explore its beauty while enjoying the natural beauty of the park.</p>
+</h4>
+</div>
+
+</body>
+</html>
